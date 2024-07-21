@@ -1,0 +1,9 @@
+[package]
+name = "load-balancer-layer4"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = "0.7.5"
+hyper-util = {version = "0.1.6", features = ["client-legacy", "http1", "http2"]}
+tokio = { version = "1.38.1", features = ["full", "rt", "macros", "rt-multi-thread"] }
