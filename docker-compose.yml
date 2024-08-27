@@ -1,0 +1,26 @@
+services:
+  rust-load-balancer:
+    build: ./rust-load-balancer
+    ports:
+      - "8080:8080"
+    depends_on:
+      - rust-web-server-1
+      - rust-web-server-2
+    networks:
+      - rust-load-balancer-network
+  rust-web-server-1:
+    build: ./rust-web-server-1
+    ports:
+      - "8081:8081"
+    networks:
+      - rust-load-balancer-network
+  rust-web-server-2:
+    build: ./rust-web-server-2
+    ports:
+      - "8082:8082"
+    networks:
+      - rust-load-balancer-network
+
+networks:
+  rust-load-balancer-network:
+    driver: bridge

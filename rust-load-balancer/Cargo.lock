@@ -335,15 +335,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "97b3888a4aecf77e811145cadf6eef5901f4782c53886191b2f693f24761847c"
 
 [[package]]
-name = "load-balancer-layer4"
-version = "0.1.0"
-dependencies = [
- "axum",
- "hyper-util",
- "tokio",
-]
-
-[[package]]
 name = "lock_api"
 version = "0.4.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -508,6 +499,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4722d768eff46b75989dd134e5c353f0d6296e5aaa3132e776cbdb56be7731aa"
 dependencies = [
  "bitflags",
+]
+
+[[package]]
+name = "rust-load-balancer"
+version = "0.1.0"
+dependencies = [
+ "axum",
+ "hyper-util",
+ "tokio",
 ]
 
 [[package]]
